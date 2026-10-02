@@ -57,8 +57,19 @@
             <kctl name="Ext_Reciver_Amp Switch" value="0" />
             <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
         </path>
+        <!--dual analogPA speaker output-->
+        <path name="dual_speaker_output" value="turnon">
+            <kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="LOL Mux" value="Playback" />
+            <kctl name="RCV Mux" value="Voice Playback" />
+        </path>
+        <path name="dual_speaker_output" value="turnoff">
+            <kctl name="LOL Mux" value="Open" />
+            <kctl name="RCV Mux" value="Open" />
+        </path>
        <!--speaker output-->
         <path name="speaker_output" value="turnon">
+            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
             <kctl name="DAC In Mux" value="Normal Path" />
             <kctl name="LOL Mux" value="Playback" />
             <kctl name="RCV Mux" value="Voice Playback" />
@@ -67,8 +78,36 @@
             <kctl name="LOL Mux" value="Open" />
             <kctl name="RCV Mux" value="Open" />
         </path>
+        <path name="speaker_output_mode_fm" value="setting">
+            <kctl name="SPK_AMP_MODE" value="FM_MODE" />
+            <kctl name="RCV_AMP_MODE" value="FM_MODE" />
+        </path>
+        <path name="speaker_output_mode_rcv" value="setting">
+            <kctl name="SPK_AMP_MODE" value="RECIEVER_MODE" />
+            <kctl name="RCV_AMP_MODE" value="RECIEVER_MODE" />
+        </path>
+        <path name="speaker_output_mode_music" value="setting">
+            <kctl name="SPK_AMP_MODE" value="SPEAKER_MODE" />
+            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
+        </path>
+        <path name="speaker_output_mode_voice" value="setting">
+            <kctl name="SPK_AMP_MODE" value="VOICE_MODE" />
+            <kctl name="RCV_AMP_MODE" value="VOICE_MODE" />
+        </path>
+        <!--headhpone dual analogPA speaker output-->
+        <path name="headphoneDualSpeaker_output" value="turnon">
+            <kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="HPL Mux" value="Loud DualSPK Playback" />
+            <kctl name="HPR Mux" value="Loud DualSPK Playback" />
+        </path>
+        <path name="headphoneDualSpeaker_output" value="turnoff">
+            <kctl name="HPL Mux" value="Open" />
+            <kctl name="HPR Mux" value="Open" />
+        </path>
         <!--headhpone_speaker output-->
         <path name="headphoneSpeaker_output" value="turnon">
+            <kctl name="SPK_AMP_MODE" value="SPEAKER_MODE" />
+            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
             <kctl name="DAC In Mux" value="Normal Path" />
             <kctl name="HPL Mux" value="LoudSPK Playback" />
             <kctl name="HPR Mux" value="LoudSPK Playback" />
